@@ -4,7 +4,7 @@ from typing import Union, Optional
 import pymongo
 from bson import ObjectId
 
-warnings.warn("The AsyncMongoAPI code is untested and may have bugs.")
+# warnings.warn("The AsyncMongoAPI code is untested and may have bugs.")
 
 
 class AsyncMongoAPI:
