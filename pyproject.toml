@@ -3,19 +3,20 @@ name = "pymongo-api-wrapper"
 version = "1.0.0"
 description = "Convenience Wrapper for pymongo client. Base Assumption is, that you only have a single database. Limits return values to a minimum."
 authors = [
-    {name = "AliSot2000",email = "alisot200@gmail.com>"},
+    {name = "AliSot2000",email = "alisot200@gmail.com"},
     {name = "IQisMySenpai",email="jannick.schroer@gmail.com"}
 ]
 license = {text = "MIT"}
 readme = "README.md"
+requires-python = ">=3.9,<4.0"
 dependencies = [
     "pymongo (>=4.13.0,<5.0.0)"
 ]
 
 
 [build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
-[tool.poetry.dependencies]
-python = ">=3.9,<4.0"
+[tool.hatch.build.targets.wheel]
+packages = ["src/pymongo_api_wrapper"]
